@@ -10,7 +10,7 @@ const TextInput = forwardRef((_, ref) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const userInput = useAppSelector((state) => state.typing.userInput);
-  const isFinished = useAppSelector((state) => state.typing.isFinished);
+  const isStarted = useAppSelector((state) => state.typing.isStarted);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const TextInput = forwardRef((_, ref) => {
       type="text"
       value={userInput}
       onChange={handleChange}
-      disabled={isFinished}
+      disabled={!isStarted}
     />
   );
 });

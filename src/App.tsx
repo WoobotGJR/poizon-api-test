@@ -64,7 +64,9 @@ const App: React.FC = () => {
 
   const handleStart = () => {
     dispatch(startTimer());
-    handleFocus();
+    setTimeout(() => {
+      handleFocus();
+    });
   };
 
   useEffect(() => {
