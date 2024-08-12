@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+Вот пример файла `README.md` для вашего проекта "Typing Speed Trainer":
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````markdown
+# Typing Speed Trainer
 
-Currently, two official plugins are available:
+Typing Speed Trainer - это веб-приложение на React, которое помогает пользователям улучшать скорость и точность печати. Оно предоставляет текст для ввода, подсчитывает скорость печати (WPM), количество ошибок, и отображает результаты после завершения задания или по истечении установленного времени.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Функциональность
 
-## Expanding the ESLint configuration
+- **Выбор текста для ввода:** Приложение предоставляет различные тексты для ввода, выбранные из заранее определенного списка.
+- **Подсветка текста:** Правильные и неправильные символы выделяются разными цветами в реальном времени.
+- **Подсчет WPM:** Скорость печати измеряется в словах в минуту (WPM).
+- **Отслеживание ошибок:** Ведется учет неправильных символов.
+- **Таймер:** Пользователь может выбрать ограничение по времени (15, 30, 45 или 60 секунд) перед началом тренировки.
+- **Результаты:** После завершения тренировки отображаются результаты, включая WPM и количество ошибок.
+- **Перезапуск:** Возможность перезапустить упражнение в любое время.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Установка
 
-- Configure the top-level `parserOptions` property like this:
+1. **Клонируйте репозиторий:**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   ```bash
+   git clone https://github.com/WoobotGJR/poizon-api-test.git
+   cd typing-speed-trainer
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. **Установите зависимости:**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Запустите приложение:**
+
+   ```bash
+   npm start
+   ```
+
+4. **Откройте приложение:**
+   Перейдите в браузере по адресу [http://localhost:5173](http://localhost:5173).
+
+## Используемые технологии
+
+- **React:** Используется для построения интерфейса пользователя.
+- **Redux Toolkit:** Управление состоянием приложения.
+- **Styled-components:** Стилизация компонентов.
+- **TypeScript:** Строгая типизация для повышения качества кода.
+
+## Как использовать
+
+1. **Выбор времени:** Выберите продолжительность теста (15, 30, 45 или 60 секунд) на панели управления.
+2. **Начало тренировки:** Нажмите кнопку "Start" для начала.
+3. **Ввод текста:** Начните вводить текст, который отображается на экране.
+4. **Завершение тренировки:** После окончания времени или при полном вводе текста, результаты будут отображены на экране.
+5. **Перезапуск:** Нажмите кнопку "Restart", чтобы начать заново с новым текстом.
+````
