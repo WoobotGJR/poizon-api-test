@@ -61,7 +61,7 @@ const typingSlice = createSlice({
       }
       if (state.timeLeft <= 0) {
         state.isFinished = true;
-        stopTimer();
+        state.isStarted = false;
       }
     },
     startTimer: (state) => {
