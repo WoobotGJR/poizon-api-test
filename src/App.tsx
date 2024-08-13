@@ -101,7 +101,9 @@ const App: React.FC = () => {
       <TextDisplay handleClick={handleFocus} />
       <TextInput ref={inputRef} />
       <Timer>Remaining time: {timeLeft}s</Timer>
-      {!isStarted && <StartButton onClick={handleStart}>Start</StartButton>}
+      {!isStarted && !isFinished && (
+        <StartButton onClick={handleStart}>Start</StartButton>
+      )}
       {isFinished && <ResultScreen />}
       <RestartButton />
     </Container>
